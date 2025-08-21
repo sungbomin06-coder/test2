@@ -1,92 +1,122 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>대리 · 탁송 서비스</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .phone-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .phone-box {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-    .phone-box:hover {
-      transform: scale(1.05);
-    }
-    .phone-box a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .phone-box img {
-      width: 60px;
-      margin-bottom: 10px;
-    }
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역시 제이카</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        .header {
+            color: #007bff;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .slogan {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .service-item {
+            background-color: #e9f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #cce5ff;
+        }
+        .service-item img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .contact-info {
+            background-color: #fffacd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #d9534f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- 헤더 -->
-  <header>
-    <h1>안전하고 믿을 수 있는 대리 · 탁송 서비스</h1>
-    <p>언제 어디서든 빠르고 편리하게!</p>
-  </header>
+<div class="container">
+    <header>
+        <p class="slogan">탁송? 대리?<br>바로 여기!</p>
+        <h1 class="header">역시 제이카</h1>
+        <p class="slogan">빠르고 확실한 탁송/대리운전</p>
+    </header>
 
-  <!-- 메인 -->
-  <main>
-    <h2>대표 번호 안내</h2>
-    <div class="phone-grid">
-      <div class="phone-box">
-        <a href="tel:010-1111-1111">
-          <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
-          010-1111-1111
-        </a>
-      </div>
-      <div class="phone-box">
-        <a href="tel:010-2222-2222">
-          <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
-          010-2222-2222
-        </a>
-      </div>
-      <div class="phone-box">
-        <a href="tel:010-3333-3333">
-          <img src="https://i
+    <main>
+        <section class="service-grid">
+            <div class="service-item">
+                <img src="https://via.placeholder.com/80/007bff/FFFFFF?text=탁송" alt="탁송 서비스 아이콘">
+                <p>로드 탁송</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/80/007bff/FFFFFF?text=대리" alt="대리운전 서비스 아이콘">
+                <p>대리운전</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/80/007bff/FFFFFF?text=기사" alt="1일 기사 서비스 아이콘">
+                <p>1일 기사</p>
+            </div>
+            <div class="service-item">
+                <a href="https://www.youtube.com/@J-car" target="_blank">
+                    <img src="https://via.placeholder.com/80/FF0000/FFFFFF?text=YouTube" alt="유튜브 채널 바로가기">
+                    <p>유튜브</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <h3>지점 위치</h3>
+            <p>대전광역시 대덕구 비래동 142-2번지, 3층</p>
+            
+            <h3>미리정비소 문의</h3>
+            <p><strong>대표:</strong> 오윤희</p>
+            <p><strong>사업자등록번호:</strong> 245-71-00511</p>
+            <p><strong>주소:</strong> 제주특별자치도 서귀포시 신례로175번길 21</p>
+            <p><strong>대표전화:</strong> <a href="tel:1688-3531">1688-3531</a></p>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
