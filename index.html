@@ -3,27 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제이카 탁송대리</title>
+  <title>대리 · 탁송 서비스</title>
   <style>
     body {
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
 
-      /* 배경 이미지 설정 */
-      background-image: url("제이카.png");  /* 배경 이미지 경로 */
-      background-size: cover;     /* 화면에 꽉 차게 */
-      background-position: center;/* 중앙 정렬 */
-      background-repeat: no-repeat; /* 반복 제거 */
-      height: 100vh;              /* 화면 전체 높이 */
+      /* 전체 배경 이미지 */
+      background-image: url('제이카.png'); /* index.html과 같은 폴더 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
     }
 
-    /* 내용 가독성을 위한 반투명 박스 */
-    .content {
-      background: rgba(0,0,0,0.5); /* 반투명 검정 배경 */
-      color: white;
-      text-align: center;
-      padding: 50px;
+    /* 중앙 버튼 박스 */
+    .phone-box-container {
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2x2 그리드 */
+      gap: 20px;
+      background: rgba(255,255,255,0.7); /* 반투명 배경 */
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* 정확히 중앙 */
     }
+
+    .phone-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      background: white;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+
+    .phone-button:hover {
+      transform: scale(1.05);
+    }
+
+    .phone-button img {
+      width: 50px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+      background: rgba(44,62,80,0.8);
+      color: white;
+    }
+
   </style>
 </head>
+<body>
+
+  <!-- 4개 전화 버튼 박스 -->
+  <div class="phone-box-container">
+    <a href="tel:010-1111-1111" class="phone-button">
+      <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
+      010-1111-1111
+    </a>
+    <a href="tel:010-2222-2222" class="phone-button">
+      <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
+      010-2222-2222
+    </a>
+    <a href="tel:010-3333-3333" class="phone-button">
+      <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
+      010-3333-3333
+    </a>
+    <a href="tel:010-4444-4444" class="phone-button">
+      <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
+      010-4444-4444
+    </a>
+  </div>
+
+  <footer>
+    © 2025 대리 · 탁송 서비스. All Rights Reserved.
+  </footer>
+
+</body>
 </html>
