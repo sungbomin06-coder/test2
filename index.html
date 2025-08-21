@@ -1,151 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>역시 제이카</title>
-    <style>
-        /* 기본 스타일 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        body {
-            background-color: #FF6B5B; /* 이미지 배경 색상과 맞춤 */
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-
-        .container {
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 900;
-            margin: 20px 0;
-            position: relative;
-        }
-
-        h1::before, h1::after {
-            content: "!";
-            font-size: 48px;
-            color: #FFD56B;
-            position: absolute;
-            top: 0;
-        }
-
-        h1::before { left: -40px; }
-        h1::after { right: -40px; }
-
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            max-width: 400px;
-            margin: 0 auto 40px;
-        }
-
-        .service-item {
-            background-color: #FF8570;
-            padding: 30px 20px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .service-item:hover {
-            transform: translateY(-5px);
-            background-color: #FF9987;
-        }
-
-        .service-item i, .service-item img {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .service-item span {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .location, .business-info {
-            background-color: #FF8570;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .location h2, .business-info h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .location p, .business-info p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-    </style>
-    <!-- 유튜브 아이콘을 위해 Font Awesome CDN 추가 -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대리 · 탁송 서비스</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .phone-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .phone-box:hover {
+      transform: scale(1.05);
+    }
+    .phone-box a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .phone-box img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-    <div class="services">
-            <div class="service-item">
-                <i class="fas fa-car"></i>
-                <span><a href="tel:1688-3531">로드 탁송</a></span>
-<a href="tel:1688-3531">전화 걸기</a>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-car"></i>
-                <span><a href="tel:1533-5454">대리운전</a></span>
-            </div>
 
-            <div class="service-item">
-                <i class="fas fa-car"></i>
-                <span>        <a href="tel:010-8081-3831">1일기사</a></span>
-            </div>
+  <!-- 헤더 -->
+  <header>
+    <h1>안전하고 믿을 수 있는 대리 · 탁송 서비스</h1>
+    <p>언제 어디서든 빠르고 편리하게!</p>
+  </header>
 
-            <div class="service-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="40">
-                <span>  <a href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">YOUTUBE</a></span>
-            </div>
-        </div>
-
-        <div class="location">
-            <h2>지점 위치</h2>
-            <p>대전광역시 대덕구 비래동 142-2번지, 3층</p>
-        </div>
-
-        <div class="business-info">
-            <h2>사업자정보</h2>
-            <p>대표: 오윤희 / 사업자등록번호: 245-71-00511<br>
-            주소: 제주특별자치도 서귀포시 신례로 175번길 21<br>
-            대표전화: 1688-3531</p>
-        </div>
-    </div>
-</body>
-</html>
-
+  <!-- 메인 -->
+  <main>
+    <h2>대표 번호 안내</h2>
+    <div class="phone-grid">
+      <div class="phone-box">
+        <a href="tel:010-1111-1111">
+          <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
+          010-1111-1111
+        </a>
+      </div>
+      <div class="phone-box">
+        <a href="tel:010-2222-2222">
+          <img src="https://img.icons8.com/ios-filled/100/2c3e50/car--v1.png" alt="자동차 아이콘">
+          010-2222-2222
+        </a>
+      </div>
+      <div class="phone-box">
+        <a href="tel:010-3333-3333">
+          <img src="https://i
