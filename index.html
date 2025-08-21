@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>역시 제이카</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #FF6655;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+    }
+    .container {
+        text-align: center;
+        max-width: 400px;
+    }
+    .top-text {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .main-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 10px 0;
+        position: relative;
+    }
+    .main-title::before,
+    .main-title::after {
+        content: "!";
+        font-size: 48px;
+        color: #FFE680;
+        position: absolute;
+        top: 0;
+    }
+    .main-title::before {
+        left: -30px;
+    }
+    .main-title::after {
+        right: -30px;
+    }
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .grid-item {
+        background-color: #fff;
+        color: #FF6655;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    .grid-item:hover {
+        transform: scale(1.05);
+    }
+    .grid-item img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    .info-box {
+        background-color: rgba(255,255,255,0.2);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    .info-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="top-text">탁송? 대리? 바로 여기!</div>
+    <div class="main-title">역시 제이카</div>
+    <div class="subtitle">빠르고 확실한 탁송/대리운전</div>
+
+    <div class="grid">
+        <div class="grid-item">
+            <img src="https://img.icons8.com/ios-filled/50/FF6655/car.png" alt="차">
+            탁송대리
+          <a href="tel:1688-3531">전화 걸기</a>
+        </div>
+      
+        <div class="grid-item">
+            <img src="https://img.icons8.com/ios-filled/50/FF6655/car.png" alt="차">
+            1일기사
+          <a href="tel:010-8081-3831">전화 걸기</a>
+        </div>
+      
+        <div class="grid-item">
+            <img src="https://img.icons8.com/ios-filled/50/FF6655/car.png" alt="차">
+            대리운전
+          <a href="tel:1533-5454">전화 걸기</a>
+        </div>
+      
+        <div class="grid-item">
+            <img src="https://img.icons8.com/ios-filled/50/FF6655/car.png" alt="차">
+            유튜브
+          <a href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">유튜브 바로가기</a>
+        </div>
+      
+    </div>
+
+    <div class="info-box">
+        <div class="info-title">지점 위치</div>
+        대전광역시 대덕구 비래동 142-2번지, 3층
+    </div>
+
+    <div class="info-box">
+        <div class="info-title">사업자정보</div>
+        사업자번호: 
+    </div>
+</div>
+</body>
+</html>
 
