@@ -5,151 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>역시 제이카</title>
     <style>
-        /* 기본 스타일 초기화 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
         body {
-            background-color: #FF6B5B; /* 이미지 배경 색상과 맞춤 */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #FF5F4D;
             color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
+            text-align: center;
         }
 
         .container {
-            text-align: center;
-            padding: 30px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
         h1 {
             font-size: 48px;
-            font-weight: 900;
             margin: 20px 0;
-            position: relative;
         }
 
-        h1::before, h1::after {
-            content: "!";
-            font-size: 48px;
-            color: #FFD56B;
-            position: absolute;
-            top: 0;
+        h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
         }
 
-        h1::before { left: -40px; }
-        h1::after { right: -40px; }
-
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        .services {
+        .icon-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
-            max-width: 400px;
-            margin: 0 auto 40px;
+            margin-bottom: 40px;
         }
 
-        .service-item {
-            background-color: #FF8570;
+        .icon-box {
+            background-color: #FF7A66;
             padding: 30px 20px;
-            border-radius: 20px;
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
+            transition: transform 0.2s;
         }
 
-        .service-item:hover {
-            transform: translateY(-5px);
-            background-color: #FF9987;
+        .icon-box:hover {
+            transform: scale(1.05);
         }
 
-        .service-item i, .service-item img {
+        .icon-box img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .icon-box span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .info {
+            background-color: #FF7A66;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .youtube-icon {
             font-size: 40px;
             margin-bottom: 10px;
         }
 
-        .service-item span {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .location, .business-info {
-            background-color: #FF8570;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .location h2, .business-info h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .location p, .business-info p {
-            font-size: 16px;
-            line-height: 1.5;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
-    <!-- 유튜브 아이콘을 위해 Font Awesome CDN 추가 -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <div class="top-text">탁송? 대리? 바로 여기!</div>
+        <p>탁송? 대리? 바로 여기!</p>
         <h1>역시 제이카</h1>
-        <div class="subtitle">빠르고 확실한 탁송/대리운전</div>
+        <h2>빠르고 확실한 탁송/대리운전</h2>
 
-        <div class="services">
-            <div class="service-item">
-                <i class="fas fa-car"></i>
+        <div class="icon-grid">
+            <div class="icon-box">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/car.png" alt="로드탁송">
                 <span>로드탁송</span>
 <a href="tel:1688-3531">전화 걸기</a>
             </div>
-            <div class="service-item">
-                <i class="fas fa-car"></i>
+            <div class="icon-box">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/car.png" alt="대리운전">
                 <span>대리운전</span>
  <a href="tel:1533-5454">전화 걸기</a>
             </div>
-            <div class="service-item">
-                <i class="fas fa-car"></i>
+            <div class="icon-box">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/car.png" alt="1일기사">
                 <span>1일기사</span>
         <a href="tel:010-8081-3831">전화 걸기</a>
             </div>
-            <div class="service-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="40">
+            <a href="https://www.youtube.com/" target="_blank" class="icon-box">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/youtube-play.png" alt="유튜브">
                 <span>유튜브</span>
   <a href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">바로가기</a>
-            </div>
+            </a>
         </div>
 
-        <div class="location">
-            <h2>지점 위치</h2>
+        <div class="info">
+            <h3>지점 위치</h3>
             <p>대전광역시 대덕구 비래동 142-2번지, 3층</p>
-        </div>
-
-        <div class="business-info">
-            <h2>사업자정보</h2>
-            <p>대표: 오윤희 / 사업자등록번호: 245-71-00511<br>
-            주소: 제주특별자치도 서귀포시 신례로 175번길 21<br>
-            대표전화: 1688-3531</p>
+            <h3>사업자정보</h3>
+            <p>대표: 오윤희 / 사업자등록번호: 245-71-00511</p>
+            <p>주소: 제주특별자치도 서귀포시 신례로175번길 21</p>
+            <p>대표전화: 1688-3531</p>
         </div>
     </div>
 </body>
