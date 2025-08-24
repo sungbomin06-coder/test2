@@ -3,74 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홈페이지</title>
+  <title>탁송_대리는 역시 제이카</title>
   <style>
     body {
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh; /* 화면 가운데 정렬 */
       background-color: #000; /* 이미지 밖은 검정 */
     }
 
-    /* 배경 이미지를 원본 크기로 표시 */
+    /* 전체 배경 */
     .background {
       position: relative;
       display: inline-block;
-      background-image: url("https://postfiles.pstatic.net/MjAyNTA4MjJfMjYx/MDAxNzU1ODE2OTc0MjI3.Nv3US2dzYur1pc8LDEAG-Tvdpzn11pEslzqMT_r-pU8g.0BWUgSpJRmA7deRc2VPbQWEwRi-G1a5hTlqJfsZeuREg.PNG/1755816796912.png?type=w3840"); /* 원본 이미지 */
-      background-repeat: no-repeat;
-      background-size: auto;  /* 원본 크기 유지 */
-      background-position: center;
-      width: 800px;  /* 실제 이미지 가로 크기 */
-      height: 1200px; /* 실제 이미지 세로 크기 */
     }
 
-    /* 투명 박스 컨테이너 */
+    .background img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 네모칸 영역 */
     .grid-box {
       position: absolute;
-      bottom: 30px; /* 이미지 안에서 위치 조정 가능 */
+      top: 47%;   /* 이미지 안에서 세로 위치 (필요시 조정 가능) */
       left: 50%;
       transform: translateX(-50%);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 10px;
-      width: 80%;
-      max-width: 400px;
-      height: 300px;
+      gap: 15px;            /* 칸 사이 간격 */
+      width: 260px;         /* 네모칸 전체 가로 */
+      height: 260px;        /* 네모칸 전체 세로 */
     }
 
-    /* 각 칸 */
     .box {
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3em;
-      font-weight: bold;
-      color: #000;
-      transition: background 0.3s;
-    }
-
-    .box:hover {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255,255,255,0); /* 투명 클릭영역 */
     }
 
     .box a {
-      color: inherit;
-      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
   <div class="background">
+    <!-- 배경 이미지 -->
+    <img src="https://postfiles.pstatic.net/MjAyNTA4MjJfNjAg/MDAxNzU1ODE2OTc0MTUw.fVI56MCQTobtM78DRINzYALaZAhcwoDV-em4zpyDc7Ag.oKLnm2DNgMlnDdzzt5NXQDkgVYVpUGs8ifKSct4ZCfIg.PNG/1755816798985.png?type=w966" alt="역시 제이카">
+
+    <!-- 네모칸 (클릭 가능) -->
     <div class="grid-box">
-      <div class="box"><a href="tel:1688-3531">바로가기</a></div>
-    <div class="box"><a href="tel:1533-5454">바로가기</a></div>
-    <div class="box"><a href="tel:01080813831">바로가기</a></div>
-    <div class="box"><a href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">바로가기</a></div>
+      <div class="box"><a href="tel:1688-3531"></a></div>  <!-- 로드탁송 -->
+      <div class="box"><a href="tel:1533-5454"></a></div>  <!-- 대리운전 -->
+      <div class="box"><a href="tel:010-8081-3831"></a></div> <!-- 1일기사 -->
+      <div class="box"><a href="https://www.youtube.com/channel/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank"></a></div> <!-- 유튜브 -->
     </div>
   </div>
 </body>
