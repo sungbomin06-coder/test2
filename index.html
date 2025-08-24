@@ -3,35 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제이카 대리운전</title>
+  <title>홈페이지</title>
   <style>
-    /* 전체 배경 */
     body {
       margin: 0;
-      height: 100vh;
-      background-image: url("https://postfiles.pstatic.net/MjAyNTA4MjJfNjAg/MDAxNzU1ODE2OTc0MTUw.fVI56MCQTobtM78DRINzYALaZAhcwoDV-em4zpyDc7Ag.oKLnm2DNgMlnDdzzt5NXQDkgVYVpUGs8ifKSct4ZCfIg.PNG/1755816798985.png?type=w3840"); /* 배경 이미지 파일명 */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh; /* 화면 가운데 정렬 */
+      background-color: #000; /* 이미지 밖은 검정 */
     }
 
-    /* 2×2 박스 컨테이너 */
+    /* 배경 이미지를 원본 크기로 표시 */
+    .background {
+      position: relative;
+      display: inline-block;
+      background-image: url("https://postfiles.pstatic.net/MjAyNTA4MjJfMjYx/MDAxNzU1ODE2OTc0MjI3.Nv3US2dzYur1pc8LDEAG-Tvdpzn11pEslzqMT_r-pU8g.0BWUgSpJRmA7deRc2VPbQWEwRi-G1a5hTlqJfsZeuREg.PNG/1755816796912.png?type=w3840"); /* 원본 이미지 */
+      background-repeat: no-repeat;
+      background-size: auto;  /* 원본 크기 유지 */
+      background-position: center;
+      width: 800px;  /* 실제 이미지 가로 크기 */
+      height: 1200px; /* 실제 이미지 세로 크기 */
+    }
+
+    /* 투명 박스 컨테이너 */
     .grid-box {
+      position: absolute;
+      bottom: 30px; /* 이미지 안에서 위치 조정 가능 */
+      left: 50%;
+      transform: translateX(-50%);
       display: grid;
-      grid-template-columns: 1fr 1fr; /* 가로 2칸 */
-      grid-template-rows: 1fr 1fr;    /* 세로 2칸 */
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       gap: 10px;
       width: 80%;
       max-width: 400px;
       height: 300px;
     }
 
-    /* 개별 박스 */
+    /* 각 칸 */
     .box {
-      background-color: rgba(255, 255, 255, 0.3); /* 반투명 박스 */
+      background-color: rgba(255, 255, 255, 0.3);
       border-radius: 12px;
       display: flex;
       justify-content: center;
@@ -43,7 +55,7 @@
     }
 
     .box:hover {
-      background-color: rgba(255, 255, 255, 0.5); /* 마우스 올리면 조금 진하게 */
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
     .box a {
@@ -53,11 +65,13 @@
   </style>
 </head>
 <body>
-  <div class="grid-box">
-    <div class="box"><a href="tel:1688-3531">바로가기</a></div>
+  <div class="background">
+    <div class="grid-box">
+      <div class="box"><a href="tel:1688-3531">바로가기</a></div>
     <div class="box"><a href="tel:1533-5454">바로가기</a></div>
     <div class="box"><a href="tel:01080813831">바로가기</a></div>
     <div class="box"><a href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">바로가기</a></div>
+    </div>
   </div>
 </body>
 </html>
