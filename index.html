@@ -3,52 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>전화 바로가기</title>
+<title>탁송대리는 역시 제이카!!</title>
 <style>
-  body {
+  body, html {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
-  .background {
+  .container {
     position: relative;
-    width: 360px; /* 이미지 가로 크기 */
-    height: 640px; /* 이미지 세로 크기 */
-    background-image: url('images/제이카2.jpg'); /* 업로드한 이미지 경로 */
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    max-width: 500px; /* 필요에 따라 이미지 크기에 맞춰 변경 */
+    margin: auto;
   }
-
-  /* 네모 박스 공통 */
-  .box {
+  .background-img {
+    width: 100%;
+    display: block;
+  }
+  .link-box {
     position: absolute;
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
+    display: block;
+    width: 100px; /* 박스 크기 조정 */
+    height: 50px; /* 박스 크기 조정 */
+    background-color: rgba(255,255,255,0); /* 완전 투명 */
+    cursor: pointer;
   }
-
-  /* 각 버튼 위치 지정 (이미지 기준 좌표) */
-  .load-tak { top: 200px; left: 40px; width: 120px; height: 80px; }
-  .daeri { top: 200px; right: 40px; width: 120px; height: 80px; }
-  .oneday { top: 320px; left: 40px; width: 120px; height: 80px; }
-  .youtube { top: 320px; right: 40px; width: 120px; height: 80px; }
 </style>
 </head>
 <body>
-  <div class="background">
-    <a href="tel:01012345678" class="box load-tak">바로가기</a>
-    <a href="tel:01023456789" class="box daeri">바로가기</a>
-    <a href="tel:01034567890" class="box oneday">바로가기</a>
-    <a href="https://www.youtube.com/@YourChannel" target="_blank" class="box youtube">바로가기</a>
-  </div>
+<div class="container">
+  <img src="제이카2.jpg" alt="제이카" class="background-img">
+
+  <!-- 첫번째 전화 -->
+  <a href="tel:1688-53531" class="link-box" style="top: 200px; left: 50px;"></a>
+
+  <!-- 두번째 전화 -->
+  <a href="tel:1533-5454" class="link-box" style="top: 200px; left: 180px;"></a>
+
+  <!-- 세번째 전화 -->
+  <a href="tel:010-8081-3831" class="link-box" style="top: 300px; left: 50px;"></a>
+
+  <!-- 유튜브 링크 -->
+  <a href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank" class="link-box" style="top: 300px; left: 180px;"></a>
+</div>
 </body>
 </html>
