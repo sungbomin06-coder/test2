@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>세로 배경 + 글자 링크</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        height: 1920px; /* 이미지 세로 해상도 기준 */
-        background-image: url('images/background.jpg'); 
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-        position: relative;
-        font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역시 제이카</title>
+    <style>
+        /* 배경 이미지 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('제이카2.jpg');
+            background-size: cover;       /* 화면에 맞게 이미지 크기 조정 */
+            background-position: center;  /* 이미지 중앙 정렬 */
+            background-repeat: no-repeat; /* 반복 금지 */
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
 
-    a.text-link {
-        position: absolute;
-        color: white;
-        font-size: 32px; /* 글자 크기 필요에 따라 조정 */
-        font-weight: bold;
-        text-decoration: none;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    /* 글자 위치(px 단위, 이미지 해상도 기준) */
-    #link1 { top: 400px; left: 50%; transform: translateX(-50%); }   /* 로드탁송 글자 위 */
-    #link2 { top: 650px; left: 50%; transform: translateX(-50%); }   /* 대리운전 글자 위 */
-    #link3 { top: 900px; left: 50%; transform: translateX(-50%); }   /* 1일기사 글자 위 */
-    #link4 { top: 1150px; left: 50%; transform: translateX(-50%); }  /* YOUTUBE 글자 위 */
-</style>
+        /* 모바일에서도 전체 화면으로 보이게 */
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <a href="tel:16883531" class="text-link" id="link1">로드탁송</a>
-    <a href="tel:15335454" class="text-link" id="link2">대리운전</a>
-    <a href="tel:01080813831" class="text-link" id="link3">1일기사</a>
-    <a href="https://www.youtube.com/채널주소" class="text-link" id="link4" target="_blank">YOUTUBE</a>
+    <div class="container">
+        <!-- 여기에 버튼이나 텍스트 추가 가능 -->
+    </div>
 </body>
 </html>
