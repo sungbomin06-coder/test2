@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>클릭 영역 예시</title>
+<title>완전 투명 클릭 영역</title>
 <style>
   html, body {
     margin: 0;
@@ -20,33 +20,54 @@
     font-family: Arial, sans-serif;
   }
 
-  /* 클릭 박스 기본 스타일 */
-  .box {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0,0,0,0); /* 완전 투명 */
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1em;
-    color: rgba(0,0,0,0); /* 글자도 투명 */
-    text-decoration: none;
+  /* 부모 컨테이너 - 이미지 기준 픽셀 */
+  .container {
+    position: relative;
+    width: 360px;   /* 원본 이미지 너비 */
+    height: 640px;  /* 원본 이미지 높이 */
+    margin: 0 auto; /* 중앙 정렬 */
   }
 
-  /* 픽셀 단위 위치와 크기 지정 */
+  /* 클릭 박스 */
+  .box {
+    position: absolute;
+    background-color: rgba(0,0,0,0); /* 완전 투명 */
+    color: rgba(0,0,0,0);            /* 글자 완전 투명 */
+    border: none;
+    outline: none;                    /* 클릭 시 테두리 제거 */
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;                /* 선택 불가 */
+  }
+
+  /* 클릭 시 잔상 제거 */
+  .box:active, .box:focus, .box:hover {
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+    outline: none;
+  }
+
+  /* 픽셀 단위 위치와 크기 */
   .box1 { top: 320px; left: 70px; width: 100px; height: 50px; }
   .box2 { top: 320px; left: 180px; width: 100px; height: 50px; }
   .box3 { top: 450px; left: 70px; width: 100px; height: 50px; }
   .box4 { top: 450px; left: 180px; width: 100px; height: 50px; }
 
+  /* 모바일 화면 대응 */
+  @media (max-width: 480px) {
+    .container {
+      width: 240px;   /* 축소 비율 */
+      height: 426px;  /* 동일 비율 유지 */
+    }
+  }
 </style>
 </head>
 <body>
-  <a class="box box1" href="tel:16883531">Click1</a>
-  <a class="box box2" href="tel:15335454">Click2</a>
-  <a class="box box3" href="tel:01080813831">Click3</a>
-  <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">Click4</a>
+  <div class="container">
+    <a class="box box1" href="tel:16883531">Click1</a>
+    <a class="box box2" href="tel:15335454">Click2</a>
+    <a class="box box3" href="tel:01080813831">Click3</a>
+    <a class="box box4" href="https://youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ?si=AlfWo8uflZRA57-6" target="_blank">Click4</a>
+  </div>
 </body>
 </html>
