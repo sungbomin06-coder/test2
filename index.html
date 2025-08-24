@@ -26,22 +26,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255,255,255,0.1); /* 약간 투명으로 글자 읽기 용이 */
+    background-color: rgba(0,0,0,0); /* 완전 투명 */
     border: none;
     cursor: pointer;
     font-weight: bold;
     font-size: 1em;
-    color: #000;
+    color: rgba(0,0,0,0); /* 글자도 투명 */
     text-decoration: none;
   }
 
-  /* 모바일 화면 대응 */
-  @media {
-    .box1 { top: 320px; left: 70px; width: 100px; height: 50px; font-size: 0.9em; }
-    .box2 { top: 320px; left: 180px; width: 100px; height: 50px; font-size: 0.9em; }
-    .box3 { top: 450px; left: 70px; width: 100px; height: 50px; font-size: 0.9em; }
-    .box4 { top: 450px; left: 180px; width: 100px; height: 50px; font-size: 0.9em; }
-  }
+  /* 픽셀 단위 위치와 크기 지정 */
+  .box1 { top: 320px; left: 70px; width: 100px; height: 50px; }
+  .box2 { top: 320px; left: 180px; width: 100px; height: 50px; }
+  .box3 { top: 450px; left: 70px; width: 100px; height: 50px; }
+  .box4 { top: 450px; left: 180px; width: 100px; height: 50px; }
+
 </style>
 </head>
 <body>
@@ -51,12 +50,3 @@
   <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">Click4</a>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
