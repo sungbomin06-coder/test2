@@ -3,52 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>역시 제이카!!</title>
+<title>세로 배경 페이지</title>
 <style>
-  body, html {
-    margin: 0;
-    padding: 0;
-  }
-  .background {
-    position: relative;
-    width: 100%;
-    max-width: 600px; /* 필요시 조정 */
-    margin: 0 auto;
-  }
-  .background img {
-    width: 100%;
-    display: block;
-  }
-  .clickable {
-    position: absolute;
-    display: block;
-    cursor: pointer;
-    /* 완전히 투명 */
-    background-color: rgba(0,0,0,0);
-    border: none;
-  }
+    /* 페이지 전체를 배경 이미지로 */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* 화면 전체 높이 */
+        background-image: url('images/background.jpg');
+        background-size: cover; /* 화면에 맞춰 늘리기 */
+        background-position: center top; /* 세로 중심 & 상단 기준 */
+        background-repeat: no-repeat;
+    }
 
-  /* 위치와 크기 조정 (예: px 단위) */
-  #call1 { top: 250px; left: 80px; width: 150px; height: 50px; } /* 로드탁송 */
-  #call2 { top: 250px; left: 300px; width: 150px; height: 50px; } /* 대리운전 */
-  #call3 { top: 420px; left: 80px; width: 150px; height: 50px; } /* 1일기사 */
-  #youtube { top: 420px; left: 300px; width: 150px; height: 50px; } /* 유튜브 */
+    /* 화면에 올릴 콘텐츠 박스 예시 */
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* 화면 하단에 배치 */
+        align-items: center;
+        padding-bottom: 50px; /* 버튼이나 글자 여백 */
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    a.call-button {
+        display: block;
+        margin: 10px 0;
+        padding: 15px 30px;
+        background-color: rgba(0,0,0,0.5); /* 반투명 버튼 */
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 </style>
 </head>
 <body>
-
-<div class="background">
-  <img src="background.jpg" alt="배경이미지">
-  
-  <!-- 전화연결 박스 -->
-  <a id="call1" class="clickable" href="tel:16883531"></a>
-  <a id="call2" class="clickable" href="tel:15335454"></a>
-  <a id="call3" class="clickable" href="tel:01080813831"></a>
-
-  <!-- 유튜브 링크 -->
-  <a id="youtube" class="clickable" href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank"></a>
-</div>
-
+    <div class="content">
+        <a href="tel:16883531" class="call-button">로드탁송 전화</a>
+        <a href="tel:15335454" class="call-button">대리운전 전화</a>
+        <a href="tel:01080813831" class="call-button">1일기사 전화</a>
+        <a href="https://www.youtube.com/채널주소" class="call-button">유튜브</a>
+    </div>
 </body>
 </html>
-
