@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>역시 제이카</title>
-    <style>
-        /* 배경 이미지 설정 */
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('background2.jpg');
-            background-size: cover;       /* 화면에 맞게 이미지 크기 조정 */
-            background-position: center;  /* 이미지 중앙 정렬 */
-            background-repeat: no-repeat; /* 반복 금지 */
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈페이지</title>
+  <style>
+    /* 전체 배경 */
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url("background.jpg"); /* GitHub Pages용 경로 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        /* 모바일에서도 전체 화면으로 보이게 */
-        .container {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-    </style>
+    /* 2×2 박스 컨테이너 */
+    .grid-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 가로 2칸 */
+      grid-template-rows: 1fr 1fr;    /* 세로 2칸 */
+      gap: 10px;
+      width: 80%;
+      max-width: 400px;
+      height: 300px;
+    }
+
+    /* 개별 박스 */
+    .box {
+      background-color: rgba(255, 255, 255, 0.3); /* 반투명 박스 */
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #000;
+      transition: background 0.3s;
+    }
+
+    .box:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .box a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- 여기에 버튼이나 텍스트 추가 가능 -->
-    </div>
+  <div class="grid-box">
+    <div class="box"><a href="tel:01012345678">바로가기</a></div>
+    <div class="box"><a href="tel:01023456789">바로가기</a></div>
+    <div class="box"><a href="tel:01034567890">바로가기</a></div>
+    <div class="box"><a href="https://www.youtube.com/@YourChannel" target="_blank">바로가기</a></div>
+  </div>
 </body>
 </html>
-
