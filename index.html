@@ -3,50 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>역시 제이카</title>
+<title>클릭 영역 예시</title>
 <style>
-  body {
+  html, body {
     margin: 0;
-    height: 100vh;
-    background-image: url("background.jpg");
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    background-image: url("background.jpg"); /* 배경 이미지 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* 박스 절대 위치 기준 */
+    position: relative;
   }
 
-  /* 개별 박스 */
+  /* 완전 투명 클릭 박스 */
   .box {
-    position: absolute; /* 절대 위치 */
-    width: 100px;       /* 박스 가로 */
-    height: 60px;       /* 박스 세로 */
-    background-color: rgba(255,255,255,0); /* 완전 투명 */
+    position: absolute;
+    background-color: rgba(0,0,0,0); /* 완전 투명 */
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #000;
+    cursor: pointer;
   }
 
-  .box a {
-    color: inherit;
-    text-decoration: none;
-  }
+  /* 배경 이미지 기준 픽셀 위치 지정 */
+  .box1 { top: 100px; left: 50px; width: 120px; height: 60px; }
+  .box2 { top: 100px; left: 200px; width: 120px; height: 60px; }
+  .box3 { top: 250px; left: 50px; width: 120px; height: 60px; }
+  .box4 { top: 250px; left: 200px; width: 120px; height: 60px; }
 
-  /* 박스 위치 설정 (픽셀 단위) */
-  .box1 { top: 50px; left: 30px; }
-  .box2 { top: 50px; left: 180px; }
-  .box3 { top: 150px; left: 30px; }
-  .box4 { top: 150px; left: 180px; }
+  /* 모바일 화면 대응 */
+  @media (max-width: 480px) {
+    .box1 { top: 80px; left: 20px; width: 100px; height: 50px; }
+    .box2 { top: 80px; left: 180px; width: 100px; height: 50px; }
+    .box3 { top: 180px; left: 20px; width: 100px; height: 50px; }
+    .box4 { top: 180px; left: 180px; width: 100px; height: 50px; }
+  }
 </style>
 </head>
 <body>
-  <div class="box box1"><a href="tel:16883531">바로가기</a></div>
-  <div class="box box2"><a href="tel:15335454">바로가기</a></div>
-  <div class="box box3"><a href="tel:01080813831">바로가기</a></div>
-  <div class="box box4"><a href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">바로가기</a></div>
+  <a class="box box1" href="tel:16883531"></a>
+  <a class="box box2" href="tel:15335454"></a>
+  <a class="box box3" href="tel:01080813831"></a>
+  <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank"></a>
 </body>
 </html>
-
