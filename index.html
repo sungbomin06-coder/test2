@@ -35,13 +35,13 @@
     text-decoration: none;
   }
 
-  /* 배경 이미지 기준 픽셀 위치 지정 */
-  .box1 { top: 174px; left: 86px; width: 68px; height: 78px; }
-  .box2 { top: 174px; left: 154px; width: 68px; height: 78px; }
-  .box3 { top: 252px; left: 86px; width: 68px; height: 78px; }
-  .box4 { top: 252px; left: 154px; width: 68px; height: 78px; }
-
-
+  /* 모바일 화면 대응 */
+  @media (max-width: 480px) {
+    .box1 { top: 200px; left: 20px; width: 100px; height: 50px; font-size: 0.9em; }
+    .box2 { top: 200px; left: 180px; width: 100px; height: 50px; font-size: 0.9em; }
+    .box3 { top: 380px; left: 20px; width: 100px; height: 50px; font-size: 0.9em; }
+    .box4 { top: 380px; left: 180px; width: 100px; height: 50px; font-size: 0.9em; }
+  }
 </style>
 </head>
 <body>
@@ -51,4 +51,3 @@
   <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank">Click4</a>
 </body>
 </html>
-
