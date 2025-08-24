@@ -3,47 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>탁송대리는 역시 제이카!!</title>
+<title>역시 제이카!!</title>
 <style>
   body, html {
     margin: 0;
     padding: 0;
   }
-  .container {
+  .background {
     position: relative;
     width: 100%;
-    max-width: 500px; /* 필요에 따라 이미지 크기에 맞춰 변경 */
-    margin: auto;
+    max-width: 600px; /* 필요시 조정 */
+    margin: 0 auto;
   }
-  .background-img {
+  .background img {
     width: 100%;
     display: block;
   }
-  .link-box {
+  .clickable {
     position: absolute;
     display: block;
-    width: 100px; /* 박스 크기 조정 */
-    height: 50px; /* 박스 크기 조정 */
-    background-color: rgba(255,255,255,0); /* 완전 투명 */
     cursor: pointer;
+    /* 완전히 투명 */
+    background-color: rgba(0,0,0,0);
+    border: none;
   }
+
+  /* 위치와 크기 조정 (예: px 단위) */
+  #call1 { top: 250px; left: 80px; width: 150px; height: 50px; } /* 로드탁송 */
+  #call2 { top: 250px; left: 300px; width: 150px; height: 50px; } /* 대리운전 */
+  #call3 { top: 420px; left: 80px; width: 150px; height: 50px; } /* 1일기사 */
+  #youtube { top: 420px; left: 300px; width: 150px; height: 50px; } /* 유튜브 */
 </style>
 </head>
 <body>
-<div class="container">
-  <img src="제이카2.jpg" alt="제이카" class="background-img">
 
-  <!-- 첫번째 전화 -->
-  <a href="tel:1688-53531" class="link-box" style="top: 200px; left: 50px;"></a>
-
-  <!-- 두번째 전화 -->
-  <a href="tel:1533-5454" class="link-box" style="top: 200px; left: 180px;"></a>
-
-  <!-- 세번째 전화 -->
-  <a href="tel:010-8081-3831" class="link-box" style="top: 300px; left: 50px;"></a>
+<div class="background">
+  <img src="제이카2.jpg" alt="배경이미지">
+  
+  <!-- 전화연결 박스 -->
+  <a id="call1" class="clickable" href="tel:16883531"></a>
+  <a id="call2" class="clickable" href="tel:15335454"></a>
+  <a id="call3" class="clickable" href="tel:01080813831"></a>
 
   <!-- 유튜브 링크 -->
-  <a href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank" class="link-box" style="top: 300px; left: 180px;"></a>
+  <a id="youtube" class="clickable" href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank"></a>
 </div>
+
 </body>
 </html>
