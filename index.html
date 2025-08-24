@@ -5,59 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>홈페이지</title>
   <style>
-    /* 전체 배경 */
     body {
       margin: 0;
       height: 100vh;
-      background-image: url("background.jpg"); /* GitHub Pages용 경로 */
+      background-image: url("images/background.jpg"); /* 이미지 경로 */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: sans-serif;
     }
 
-    /* 2×2 박스 컨테이너 */
-    .grid-box {
+    .container {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* 가로 2칸 */
-      grid-template-rows: 1fr 1fr;    /* 세로 2칸 */
-      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 30px 20px;
       width: 80%;
-      max-width: 400px;
-      height: 300px;
+      max-width: 500px;
+      text-align: center;
     }
 
-    /* 개별 박스 */
-    .box {
-      background-color: rgba(255, 255, 255, 0.3); /* 반투명 박스 */
-      border-radius: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3em;
+    .text {
+      font-size: 1.2em;
       font-weight: bold;
-      color: #000;
-      transition: background 0.3s;
+      color: #fff;
+      margin-bottom: 5px;
     }
 
-    .box:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .box a {
-      color: inherit;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="grid-box">
-    <div class="box"><a href="tel:01012345678">바로가기</a></div>
-    <div class="box"><a href="tel:01023456789">바로가기</a></div>
-    <div class="box"><a href="tel:01034567890">바로가기</a></div>
-    <div class="box"><a href="https://www.youtube.com/@YourChannel" target="_blank">바로가기</a></div>
-  </div>
-</body>
-</html>
+    .box {
+      background-color: rgba(255,255,255,0.9); /* 하얀 네모 */
+      border-radius: 12px;
+      width: 100%;
+      height: 60px; /* 박스 높이 조절 */
+      display: flex;
+      justif
