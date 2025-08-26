@@ -2,12 +2,11 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>탁송대리는 역시 제이카!!!</title>
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin:0; padding:0; }
     body {
-      margin: 0;
       background: #000;
       display: flex;
       justify-content: center;
@@ -17,8 +16,7 @@
     .image-wrap {
       position: relative;
       width: 100%;
-      max-width: 768px;
-      overflow: hidden;
+      max-width: 768px; /* 화면 최대 폭 */
     }
 
     .image-wrap img {
@@ -36,24 +34,33 @@
       text-decoration: none;
     }
 
-    /* 픽셀 단위 */
-  .box1 { top: 1632px; left: 489px; width: 652px; height: 652px; }
-  .box2 { top: 1632px; left: 1647px; width: 652px; height: 652px; }
-  .box3 { top: 2462px; left: 489px; width: 652px; height: 652px; }
-  .box4 { top: 2462px; left: 1647px; width: 652px; height: 652px; }
+    /* 원본 이미지 2781x3933 기준 퍼센트 */
+    .box1 { top: 41.52%; left: 17.58%; width: 23.44%; height: 16.59%; }
+    .box2 { top: 41.52%; left: 59.24%; width: 23.44%; height: 16.59%; }
+    .box3 { top: 62.67%; left: 17.58%; width: 23.44%; height: 16.59%; }
+    .box4 { top: 62.67%; left: 59.24%; width: 23.44%; height: 16.59%; }
 
     .box:focus {
       outline: 2px dashed #fff;
       outline-offset: 2px;
     }
+
+    /* 개발용 디버그 색상 (원하면 해제) */
+    /*
+    .box { background: rgba(255,0,0,0.25); }
+    */
   </style>
 </head>
 <body>
   <div class="image-wrap">
     <img src="background.jpg" alt="탁송대리 배경 이미지">
+
+    <!-- 전화 걸기 -->
     <a class="box box1" href="tel:16883531" aria-label="로드탁송 전화걸기"></a>
     <a class="box box2" href="tel:15335454" aria-label="대리운전 전화걸기"></a>
     <a class="box box3" href="tel:01080813531" aria-label="1일기사 전화걸기"></a>
+
+    <!-- 유튜브 채널 -->
     <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank" rel="noopener" aria-label="유튜브 채널 열기"></a>
   </div>
 </body>
