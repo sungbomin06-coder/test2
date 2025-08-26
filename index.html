@@ -1,105 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>탁송대리는 역시 제이카!!!</title>
-  <style>
-    * { box-sizing: border-box; margin:0; padding:0; }
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>탁송대리는 역시 제이카!!!</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  html, body { width: 100%; height: 100%; margin:0; padding:0; background:#fff; }
 
-    .image-wrap {
-      position: relative;
-      width: 100%;
-      height: 100dvh; /* 모바일 주소창 포함 전체 화면 */
-      overflow: hidden;
-    }
+  /* 반응형 이미지 비율 유지 */
+  .image-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 177.78%; /* 예: 이미지 비율 9:16 -> 16/9 = 1.7778 */
+    overflow: hidden;
+  }
 
-    .image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* 화면 꽉 차게, 비율 유지 */
-      display: block;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
+  .image-wrap img {
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 
-    .box {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      border-radius: 12px;
-      transition: transform 0.1s;
-      cursor: pointer;
-    }
+  .box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: transform 0.1s;
+    cursor: pointer;
+  }
 
-    /* 모바일 터치 영역 확대 */
-    .box::after {
-      content: "";
-      position: absolute;
-      top: -15%;
-      left: -15%;
-      width: 130%;
-      height: 130%;
-    }
+  .box::after {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -15%;
+    width: 130%;
+    height: 130%;
+  }
 
-    /* 버튼 아이콘 스타일 */
-    .box1 { 
-      top: 41.52%; left: 20.5%; width: 21%; height: 12%;
-      background: url('icon_taksong.png') no-repeat center/contain;
-    }
-    .box2 { 
-      top: 41.52%; left: 55.5%; width: 21%; height: 12%;
-      background: url('icon_daeri.png') no-repeat center/contain;
-    }
-    .box3 { 
-      top: 60%; left: 20.5%; width: 21%; height: 12%;
-      background: url('icon_1day.png') no-repeat center/contain;
-    }
-    .box4 { 
-      top: 60%; left: 55.5%; width: 21%; height: 12%;
-      background: url('icon_youtube.png') no-repeat center/contain;
-    }
+  .box:active,
+  .box:focus {
+    transform: scale(1.1);
+    outline: 2px dashed transparent;
+    outline-offset: 2px;
+  }
 
-    /* 클릭/포커스 시 확대, 점선 투명 처리 */
-    .box:active,
-    .box:focus {
-      transform: scale(1.1);
-      outline: 2px dashed transparent;
-      outline-offset: 2px;
-    }
-  </style>
+  /* 버튼 위치와 크기 (이미지 비율 기준 %) */
+  .box1 { top: 41.5%; left: 20.5%; width: 21%; height: 12%; background: url('icon_taksong.png') no-repeat center/contain; }
+  .box2 { top: 41.5%; left: 55.5%; width: 21%; height: 12%; background: url('icon_daeri.png') no-repeat center/contain; }
+  .box3 { top: 60%; left: 20.5%; width: 21%; height: 12%; background: url('icon_1day.png') no-repeat center/contain; }
+  .box4 { top: 60%; left: 55.5%; width: 21%; height: 12%; background: url('icon_youtube.png') no-repeat center/contain; }
+</style>
 </head>
 <body>
-  <div class="image-wrap">
-    <img src="background.jpg" alt="탁송대리 배경 이미지">
+<div class="image-wrap">
+  <img src="background.jpg" alt="탁송대리 배경 이미지">
 
-    <!-- 전화 걸기 -->
-    <a class="box box1" href="tel:16883531" aria-label="로드탁송 전화걸기"></a>
-    <a class="box box2" href="tel:15335454" aria-label="대리운전 전화걸기"></a>
-    <a class="box box3" href="tel:01080813531" aria-label="1일기사 전화걸기"></a>
-
-    <!-- 유튜브 채널 -->
-    <a class="box box4" href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank" rel="noopener" aria-label="유튜브 채널 열기"></a>
-  </div>
-
-  <script>
-    function setFullHeight() {
-      const vh = window.innerHeight;
-      document.querySelector('.image-wrap').style.height = vh + 'px';
-    }
-
-    // 브라우저 로드 및 리사이즈 시 전체 화면 유지
-    window.addEventListener('resize', setFullHeight);
-    window.addEventListener('load', setFullHeight);
-  </script>
+  <a class="box box1" href="tel:16883531" aria-label="로드탁송 전화걸기"></a>
+  <a class="box box2" href="tel:15335454" aria-label="대리운전 전화걸기"></a>
+  <a class="box box3" href="tel:01080813531" aria-label="1일기사 전화걸기"></a>
+  <a class="box box4" href="https://www.youtube.com/channel/UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank" rel="noopener" aria-label="유튜브 채널 열기"></a>
+</div>
 </body>
 </html>
