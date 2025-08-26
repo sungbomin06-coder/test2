@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>탁송대리는 역시 제이카!!!</title>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  body {
-    background-image: url("background.jpg"); /* 배경 이미지 */
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
-  /* 클릭 박스 (완전히 투명 + 클릭 가능) */
-  .box {
-    position: absolute;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: transparent;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent; /* 모바일 클릭시 잔상 제거 */
-  }
-
-  /* 실제 이미지 기준 픽셀 단위 배치 */
-  .box1 { top: 320px; left: 70px; width: 120px; height: 60px; }
-  .box2 { top: 320px; left: 220px; width: 120px; height: 60px; }
-  .box3 { top: 450px; left: 70px; width: 120px; height: 60px; }
-  .box4 { top: 450px; left: 220px; width: 120px; height: 60px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>역시 제이카!!</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      justify-content: center;  /* 가운데 정렬 */
+      align-items: center;
+      background: #000; /* 남는 공간은 검정색(필요시 변경 가능) */
+    }
+    .background {
+      width: 100%;
+      height: 100%;
+      background-image: url("background.jpg");
+      background-size: contain;     /* 이미지 전체 보이도록 */
+      background-repeat: no-repeat; /* 반복 없음 */
+      background-position: center;  /* 중앙 정렬 */
+    }
+  </style>
 </head>
 <body>
-  <a class="box box1" href="tel:16883531"></a>
-  <a class="box box2" href="tel:15335454"></a>
-  <a class="box box3" href="tel:01080813831"></a>
-  <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank"></a>
+  <div class="background"></div>
 </body>
 </html>
