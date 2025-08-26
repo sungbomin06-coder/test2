@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>탁송대리는 역시 제이카!!</title>
+  <title>탁송대리는 역시 제이카!!!</title>
   <style>
     html, body {
       margin: 0;
@@ -12,22 +12,38 @@
     }
     body {
       display: flex;
-      justify-content: center;  /* 가운데 정렬 */
+      justify-content: center;
       align-items: center;
-      background: #000; /* 남는 공간은 검정색(필요시 변경 가능) */
+      background: #000; /* 여백 색상 */
     }
     .background {
+      position: relative;   /* 버튼을 배치할 기준 */
       width: 100%;
       height: 100%;
       background-image: url("background.jpg");
-      background-size: contain;     /* 이미지 전체 보이도록 */
-      background-repeat: no-repeat; /* 반복 없음 */
-      background-position: center;  /* 중앙 정렬 */
+      background-size: contain;     /* 세로형 반응형 */
+      background-repeat: no-repeat;
+      background-position: center;
     }
+    .box {
+      position: absolute;
+      display: block;
+      background: rgba(255, 0, 0, 0); /* 완전 투명 */
+      border: none;
+    }
+    /* 버튼 위치/크기 조정 (퍼센트 단위라 PC/모바일 모두 대응됨) */
+    .box1 { top: 20%; left: 30%; width: 40%; height: 8%; }  /* 로드탁송 */
+    .box2 { top: 35%; left: 30%; width: 40%; height: 8%; }  /* 대리운전 */
+    .box3 { top: 50%; left: 30%; width: 40%; height: 8%; }  /* 1일기사 */
+    .box4 { top: 65%; left: 30%; width: 40%; height: 8%; }  /* 유튜브 */
   </style>
 </head>
 <body>
-  <div class="background"></div>
+  <div class="background">
+    <a class="box box1" href="tel:16883531"></a>
+    <a class="box box2" href="tel:15335454"></a>
+    <a class="box box3" href="tel:01080813531"></a>
+    <a class="box box4" href="https://www.youtube.com/@UC-7kl6MvwMtRAx_rIO7pnMQ" target="_blank"></a>
+  </div>
 </body>
 </html>
-
